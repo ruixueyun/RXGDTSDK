@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedSDK;
 
 /**
+ * 通用上报
+ */
+- (void)logAction:(NSString *)actionName actionParam:(NSDictionary *)actionParam;
+
+/**
  * 初始化
  */
 - (void)regist;
@@ -27,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)handleOpenUrl:(NSURL *)url;
 
 /**
- * 初始化
+ * 初始化（激活）
  */
 - (void)initWithActionSetId:(NSString *)actionSetId secretKey:(NSString *)secretKey;
 
